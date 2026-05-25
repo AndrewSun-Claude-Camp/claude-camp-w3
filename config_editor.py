@@ -43,7 +43,11 @@ def update_config(config):
         except ValueError:
             print("font size must be a number.")
             return
-        
+
+        if new_value < 8 or new_value > 32:
+            print("font size is out of range (8 - 32).")
+            return
+
     config[key] = new_value
     print("\nPreference updated successfully.")
     return config
@@ -71,7 +75,7 @@ while True:
     if choice == "1":
         show_config(config)
     elif choice == "2":
-        config = update_config(config)
+        update_config(config)
     elif choice == "3":
         save_config(config)
     elif choice == "4":
