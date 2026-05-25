@@ -63,12 +63,7 @@ def show_menu():
 config = read_config()
 
 while True:
-    #show_menu()
-    print("\nMenu:")
-    print("1. Show preferences")
-    print("2. Modify preference")
-    print("3. Save preferences")
-    print("4. Exit")
+    show_menu()
 
     choice = input("Enter a choice: ").strip()
 
